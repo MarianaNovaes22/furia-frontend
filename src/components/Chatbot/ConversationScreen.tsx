@@ -66,6 +66,7 @@ const ConversationScreen = ({ messages, onSendMessage }: Props) => {
         >
           ➤
         </button>
+        
       </div>
     </div>
   );

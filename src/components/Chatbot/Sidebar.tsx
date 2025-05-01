@@ -1,15 +1,19 @@
+
+
 interface SidebarProps {
   closeSidebar?: () => void;
   onResetChat?: () => void;
 }
 
 const Sidebar = ({ closeSidebar, onResetChat }: SidebarProps) => {
+
   const handleClick = (label: string) => {
     if (label === "Reiniciar" && onResetChat) {
       onResetChat(); 
     }
     if (closeSidebar) closeSidebar(); 
   };
+  
 
   return (
     <div className="w-64 bg-black/70 text-white h-full flex flex-col p-4">
@@ -28,8 +32,11 @@ const Sidebar = ({ closeSidebar, onResetChat }: SidebarProps) => {
           >
             {label.toUpperCase()}
           </button>
+          
         ))}
       </div>
+      
+
     </div>
   );
 };
